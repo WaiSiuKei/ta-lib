@@ -10,5 +10,5 @@ TODO
 
 In ES6:
 ```js
-import ema from 'talib.ema'
+import ema from 'ta-lib.ema'
 ```

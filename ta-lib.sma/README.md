@@ -8,5 +8,5 @@ TODO
 
 In ES6:
 ```js
-import ema from 'talib.sma'
+import ema from 'ta-lib.sma'
 ```
