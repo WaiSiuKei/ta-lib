@@ -1,0 +1,7 @@
+node_modules
+build
+.tmp
+/build
+/tmp
+/.idea
+npm-debug.log
