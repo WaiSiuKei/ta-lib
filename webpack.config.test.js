@@ -3,6 +3,7 @@ var OpenBrowserPlugin = require('open-browser-webpack-plugin')
 
 module.exports = {
   cache: true,
+  devtool: 'cheap-module-eval-source-map',
   entry: {
     Index: [
       'webpack-dev-server/client?http://localhost:3001',
@@ -13,6 +14,12 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'test'),
     filename: 'test.js'
+  },
+  resolve: {
+    alias: {
+      'ta-lib.ema': path.join(__dirname, './ta-lib.ema/'),
+      'ta-lib.sma': path.join(__dirname, './ta-lib.sma/')
+    }
   },
   module: {
     loaders: [
