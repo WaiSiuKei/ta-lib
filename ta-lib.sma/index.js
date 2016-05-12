@@ -1,4 +1,4 @@
-export default function sma(values, timeperiod = 30) {
+const sma = (values, timeperiod = 30) => {
   if (!Number.isFinite(timeperiod)) throw new Error('Timeperiod should be a number!')
   var window = []
   var skip = 0
@@ -14,7 +14,7 @@ export default function sma(values, timeperiod = 30) {
     } else if (i < timeperiod + skip - 1) {
       window.push(v)
       return NaN
-    } else if (i == timeperiod + skip - 1){
+    } else if (i == timeperiod + skip - 1) {
       window.push(v)
       return window.reduce((a, b) => a + b) / timeperiod
     } else {
@@ -24,3 +24,5 @@ export default function sma(values, timeperiod = 30) {
     }
   })
 }
+
+module.exports = sma

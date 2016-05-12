@@ -1,6 +1,6 @@
 import ema from 'ta-lib.ema'
 
-export default function macd(values, fastPeriod = 12, slowPeriod = 26, signalPeriod = 9) {
+const macd = (values, fastPeriod = 12, slowPeriod = 26, signalPeriod = 9)=> {
   if (Number.isFinite(fastPeriod) && Number.isFinite(slowPeriod) && fastPeriod > slowPeriod) throw new Error('SlowPeriod should be greater than fastPeriod!')
 
   var macd = [],
@@ -22,5 +22,7 @@ export default function macd(values, fastPeriod = 12, slowPeriod = 26, signalPer
     histogram.push(macd[i] - signalLine[i])
   }
 
-  return { macd, signalLine, histogram }
+  return {macd, signalLine, histogram}
 }
+
+module.exports = macd

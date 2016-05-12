@@ -1,6 +1,6 @@
 # ta-lib.ema
 
-The ta-lib method `ema` exported as an ES6 module.
+The ta-lib method `ema` exported as a module.
 
 ## Installation
 

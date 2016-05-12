@@ -1,4 +1,4 @@
-export default function ema(close, timeperiod = 30) {
+const ema = (close, timeperiod = 30) => {
   if (!Number.isFinite(timeperiod)) throw new Error('Timeperiod should be a number!')
   var alpha = 2 / (timeperiod + 1)
   var previous
@@ -28,3 +28,5 @@ export default function ema(close, timeperiod = 30) {
     }
   })
 }
+
+module.exports = ema

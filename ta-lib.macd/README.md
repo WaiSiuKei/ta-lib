@@ -1,6 +1,6 @@
 # ta-lib.macd
 
-The ta-lib method `macd` exported as an ES6 module.
+The ta-lib method `macd` exported as a module.
 
 ## Installation
 

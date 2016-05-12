@@ -1,6 +1,6 @@
 {
   "name": "ta-lib.ema",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Exponential Moving Average function.",
   "main": "index.js",
   "scripts": {

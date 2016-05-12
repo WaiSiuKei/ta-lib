@@ -1,6 +1,6 @@
 {
   "name": "ta-lib.macd",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "MACD function.",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/WaiSiuKei/ta-lib#readme",
   "keywords": [
-    "ema"
+    "macd"
   ],
   "dependencies": {
     "ta-lib.ema": "*"
