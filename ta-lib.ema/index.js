@@ -1,4 +1,4 @@
-const ema = (close, timeperiod = 30) => {
+var ema = (close, timeperiod = 30) => {
   if (!Number.isFinite(timeperiod)) throw new Error('Timeperiod should be a number!')
   var alpha = 2 / (timeperiod + 1)
   var previous
@@ -18,11 +18,11 @@ const ema = (close, timeperiod = 30) => {
       return NaN
     } else if (i === timeperiod + skip - 1) {
       initialAccumulator += v
-      let initialValue = initialAccumulator / timeperiod
+      var initialValue = initialAccumulator / timeperiod
       previous = initialValue
       return initialValue
     } else {
-      let nextValue = alpha * (v - previous) + previous
+      var nextValue = alpha * (v - previous) + previous
       previous = nextValue
       return nextValue
     }

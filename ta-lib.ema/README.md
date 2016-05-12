@@ -9,9 +9,9 @@ Using npm:
 $ npm i --save ta-lib.ema
 ```
 
-In ES6:
+In Node.js:
 ```js
-import ema from 'ta-lib.ema'
+var ema = require('ta-lib.ema')
 ```
 
 See [package source](https://github.com/WaiSiuKei/ta-lib/tree/master/ta-lib.ema) for more details.

@@ -1,4 +1,4 @@
-const sma = (values, timeperiod = 30) => {
+var sma = (values, timeperiod = 30) => {
   if (!Number.isFinite(timeperiod)) throw new Error('Timeperiod should be a number!')
   var window = []
   var skip = 0

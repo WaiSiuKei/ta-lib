@@ -9,8 +9,8 @@ Using npm:
 $ npm i --save ta-lib.macd
 ```
 
-In ES6:
+In Node.js:
 ```js
-import ema from 'ta-lib.macd'
+var macd = require('ta-lib.macd')
 ```
 See [package source](https://github.com/WaiSiuKei/ta-lib/tree/master/ta-lib.macd) for more details.
