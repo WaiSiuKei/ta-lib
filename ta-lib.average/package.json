@@ -1,6 +1,6 @@
 {
   "name": "ta-lib.average",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Average function.",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/WaiSiuKei/ta-lib#readme",
   "keywords": [
-    "standard deviation"
+    "average"
   ]
 }

@@ -1,6 +1,6 @@
 {
   "name": "ta-lib.sma",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "Simple Moving Average function.",
   "main": "index.js",
   "scripts": {
@@ -18,5 +18,8 @@
   "homepage": "https://github.com/WaiSiuKei/ta-lib#readme",
   "keywords": [
     "sma"
-  ]
+  ],
+  "dependencies": {
+    "ta-lib.average": "*"
+  }
 }
