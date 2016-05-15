@@ -1,0 +1,26 @@
+{
+  "name": "ta-lib.bbands",
+  "version": "0.0.1",
+  "description": "Bollinger Bands function.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WaiSiuKei/ta-lib.git"
+  },
+  "author": "WaiSiuKei <wakiki@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WaiSiuKei/ta-lib/issues"
+  },
+  "homepage": "https://github.com/WaiSiuKei/ta-lib#readme",
+  "keywords": [
+    "bollinger bands"
+  ],
+  "dependencies": {
+    "ta-lib.sma": "*",
+    "ta-lib.stddev": "*"
+  }
+}
