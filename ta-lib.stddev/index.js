@@ -3,11 +3,11 @@ var average = require('ta-lib.average')
 var standardDeviation = values => {
   var avg = average(values)
   var squareDiffs = values.map(value => Math.pow(value - avg, 2))
-
   return Math.sqrt(average(squareDiffs))
 }
 
-var stddev = function (close, timeperiod = 5) {
+var stddev = function (values, timeperiod = 5) {
+  if (!Number.isFinite(timeperiod)) throw new Error('Timeperiod should be a number!')
   var window = []
   var skip = 0
 
