@@ -1,7 +1,13 @@
-var sum = require('ta-lib.sum')
+var average = require('ta-lib.average')
 
-var sma = (values, timeperiod = 30) => {
-  if (!Number.isFinite(timeperiod)) throw new Error('Timeperiod should be a number!')
+var standardDeviation = values => {
+  var avg = average(values)
+  var squareDiffs = values.map(value => Math.pow(value - avg, 2))
+
+  return Math.sqrt(average(squareDiffs))
+}
+
+var stddev = function (close, timeperiod = 5) {
   var window = []
   var skip = 0
 
@@ -18,13 +24,13 @@ var sma = (values, timeperiod = 30) => {
       return NaN
     } else if (i == timeperiod + skip - 1) {
       window.push(v)
-      return sum(window) / timeperiod
+      return standardDeviation(window)
     } else {
       window.push(v)
       window.splice(0, 1)
-      return sum(window) / timeperiod
+      return standardDeviation(window)
     }
   })
 }
 
-module.exports = sma
+module.exports = stddev
