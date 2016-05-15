@@ -11,7 +11,7 @@ $ npm i --save ta-lib.sma
 
 In Node.js:
 ```js
-var ema = require('ta-lib.sma')
+var sma = require('ta-lib.sma')
 ```
 
 See [package source](https://github.com/WaiSiuKei/ta-lib/tree/master/ta-lib.sma) for more details.
