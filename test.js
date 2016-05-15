@@ -6,6 +6,7 @@ import sumTest from './ta-lib.sum/test'
 import averageTest from './ta-lib.sum/test'
 import bbandsTest from './ta-lib.bbands/test'
 import demaTest from './ta-lib.dema/test'
+import eratioTest from './ta-lib.eratio/test.js'
 
 describe('ta-lib.ema', emaTest)
 describe('ta-lib.sma', smaTest)
@@ -15,3 +16,4 @@ describe('ta-lib.sum', sumTest)
 describe('ta-lib.average', averageTest)
 describe('ta-lib.bbands', bbandsTest)
 describe('ta-lib.dema', demaTest)
+describe('ta-lib.eRatio', eratioTest)

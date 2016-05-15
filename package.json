@@ -4,7 +4,7 @@
   "description": "Technical Analysis functions in Javascript",
   "scripts": {
     "clean": "rimraf -rf test/ -rf lib/",
-    "test": "./node_modules/.bin/webpack-dev-server --port 3002 --hot --colors --config webpack.config.test.js"
+    "test": "./node_modules/.bin/webpack-dev-server --port 3002 --hot --colors --config webpack.config.test.js --display-error-details"
   },
   "repository": {
     "type": "git",

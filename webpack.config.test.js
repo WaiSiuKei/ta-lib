@@ -22,7 +22,8 @@ module.exports = {
       'ta-lib.sum': path.join(__dirname, './ta-lib.sum/'),
       'ta-lib.average': path.join(__dirname, './ta-lib.average/'),
       'ta-lib.stddev': path.join(__dirname, './ta-lib.stddev/')
-    }
+    },
+    extensions: ["", ".js"]
   },
   module: {
     loaders: [
