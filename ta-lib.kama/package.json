@@ -1,7 +1,7 @@
 {
-  "name": "ta-lib.smoothing-constant",
+  "name": "ta-lib.kama",
   "version": "0.0.1",
-  "description": "Smoothing Constant function.",
+  "description": "Kaufman Adaptive Moving Average function.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/WaiSiuKei/ta-lib#readme",
   "keywords": [
-    "Smoothing Constant"
+    "Kaufman Adaptive Moving Average"
   ],
   "dependencies": {
     "ta-lib.eratio": "*"

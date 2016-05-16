@@ -21,7 +21,8 @@ module.exports = {
       'ta-lib.sma': path.join(__dirname, './ta-lib.sma/'),
       'ta-lib.sum': path.join(__dirname, './ta-lib.sum/'),
       'ta-lib.average': path.join(__dirname, './ta-lib.average/'),
-      'ta-lib.stddev': path.join(__dirname, './ta-lib.stddev/')
+      'ta-lib.stddev': path.join(__dirname, './ta-lib.stddev/'),
+      'ta-lib.eratio': path.join(__dirname, './ta-lib.eratio/')
     },
     extensions: ["", ".js"]
   },
