@@ -18,5 +18,8 @@
   "homepage": "https://github.com/WaiSiuKei/ta-lib#readme",
   "keywords": [
     "sum"
-  ]
+  ],
+  "dependencies": {
+    "Big.js": "*"
+  }
 }

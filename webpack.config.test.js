@@ -18,6 +18,8 @@ module.exports = {
   resolve: {
     alias: {
       'ta-lib.ema': path.join(__dirname, './ta-lib.ema/'),
+      'ta-lib.max': path.join(__dirname, './ta-lib.max/'),
+      'ta-lib.min': path.join(__dirname, './ta-lib.min/'),
       'ta-lib.sma': path.join(__dirname, './ta-lib.sma/'),
       'ta-lib.sum': path.join(__dirname, './ta-lib.sum/'),
       'ta-lib.average': path.join(__dirname, './ta-lib.average/'),

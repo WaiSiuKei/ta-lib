@@ -20,7 +20,8 @@
     "Efficiency Ratio"
   ],
   "dependencies": {
-    "ta-lib.sma": "*"
+    "ta-lib.sma": "*",
+    "big.js": "*"
   },
   "devDependencies": {}
 }

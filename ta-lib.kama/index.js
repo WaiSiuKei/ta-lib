@@ -1,42 +1,45 @@
 var eratio = require('ta-lib.eratio')
+var Big = require('big.js')
 
-var smoothingConstant = (values, timeperiod = 10, fastestperiod = 2, slowestperiod = 30) => {
+var smoothingConstant = function (values, timeperiod = '10', fastestperiod = '2', slowestperiod = '30') {
   var er = eratio(values, timeperiod)
-  var fastestSC = 2 / (fastestperiod + 1)
-  var slowestSC = 2 / (slowestperiod + 1)
+  var fastestSC = Big('2').div(Big(fastestperiod).plus('1'))
+  var slowestSC = Big('2').div(Big(slowestperiod).plus('1'))
   return er.map(v => {
-    if (!Number.isFinite(fastestperiod)) {
+    if (!(v instanceof Big)) {
       return NaN
     } else {
-      return Math.pow(v * (fastestSC - slowestSC) + slowestSC, 2)
+      return v.times(fastestSC.minus(slowestSC)).plus(slowestSC).pow(2)
     }
   })
 }
 
-var kama = (values, timeperiod = 10, fastestperiod = 2, slowestperiod = 30) => {
-  if (!Number.isFinite(fastestperiod)) throw new Error('Fastestperiod should be a number!')
-  if (!Number.isFinite(slowestperiod)) throw new Error('Slowestperiod should be a number!')
-  if (fastestperiod > slowestperiod) throw new Error('Slowestperiod should be greater than Fastestperiod!')
+var kama = (values, timeperiod = '10', fastestperiod = '2', slowestperiod = '30') => {
+  if (!(fastestperiod instanceof Big || typeof fastestperiod === 'string')) throw new Error('Fastestperiod should be an instance of Big or string!')
+  if (!(slowestperiod instanceof Big || typeof slowestperiod === 'string')) throw new Error('Slowestperiod should be an instance of Big or string!')
+  if (Big(fastestperiod).gt(slowestperiod)) throw new Error('Slowestperiod should be greater than Fastestperiod!')
+  if (!(timeperiod instanceof Big || typeof timeperiod === 'string')) throw new Error('Timeperiod should be an instance of Big or string!')
 
+  var timeperiodNum = parseInt(Big(timeperiod).toString())
   var skip = 0
   var previous = NaN
   var nextValue = NaN
   var sc = smoothingConstant(values, timeperiod, fastestperiod, slowestperiod)
   return values.map((v, i) => {
-    if (!Number.isFinite(v)) {
+    if (!(v instanceof Big)) {
       if (isNaN(v)) {
         skip += 1
         return NaN
       } else {
-        throw new Error('Input value should be a number!')
+        throw new Error('Input value should be an instance of Big or NaN!')
       }
-    } else if (i < timeperiod + skip - 1) {
+    } else if (i < timeperiodNum + skip - 1) {
       return NaN
-    } else if (i === timeperiod + skip - 1) {
+    } else if (i === timeperiodNum + skip - 1) {
       previous = v
       return v
     } else {
-      nextValue = previous + sc[i] * (v - previous)
+      nextValue = previous.plus(sc[i].times(v.minus(previous)))
       previous = nextValue
       return nextValue
     }

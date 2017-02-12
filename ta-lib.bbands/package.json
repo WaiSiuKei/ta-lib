@@ -21,6 +21,7 @@
   ],
   "dependencies": {
     "ta-lib.sma": "*",
-    "ta-lib.stddev": "*"
+    "ta-lib.stddev": "*",
+    "big.js": "*"
   }
 }

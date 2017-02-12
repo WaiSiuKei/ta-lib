@@ -20,7 +20,8 @@
     "Kaufman Adaptive Moving Average"
   ],
   "dependencies": {
-    "ta-lib.eratio": "*"
+    "ta-lib.eratio": "*",
+    "big.js": "*"
   },
   "devDependencies": {}
 }

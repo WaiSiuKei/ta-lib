@@ -20,7 +20,8 @@
     "macd"
   ],
   "dependencies": {
-    "ta-lib.ema": "*"
+    "ta-lib.ema": "*",
+    "big.js": "*"
   },
   "devDependencies": {}
 }

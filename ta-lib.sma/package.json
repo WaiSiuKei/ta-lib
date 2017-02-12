@@ -20,6 +20,7 @@
     "sma"
   ],
   "dependencies": {
-    "ta-lib.average": "*"
+    "ta-lib.average": "*",
+    "big.js": "*"
   }
 }
