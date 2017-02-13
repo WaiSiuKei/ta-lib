@@ -1,4 +1,5 @@
-import averageTest from './ta-lib.sum/test' //
+import adl from './ta-lib.adl/test'
+import averageTest from './ta-lib.sum/test'
 import bbandsTest from './ta-lib.bbands/test'
 import demaTest from './ta-lib.dema/test'
 import emaTest from './ta-lib.ema/test'
@@ -10,6 +11,7 @@ import smaTest from './ta-lib.sma/test'
 import stddevTest from './ta-lib.stddev/test'
 import sumTest from './ta-lib.sum/test'
 
+describe('ta-lib.adl', adl)
 describe('ta-lib.average', averageTest)
 describe('ta-lib.bbands', bbandsTest)
 describe('ta-lib.dema', demaTest)
