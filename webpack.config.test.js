@@ -17,6 +17,7 @@ module.exports = {
   },
   resolve: {
     alias: {
+      'ta-lib.aroon': path.join(__dirname, './ta-lib.aroon/'),
       'ta-lib.ema': path.join(__dirname, './ta-lib.ema/'),
       'ta-lib.max': path.join(__dirname, './ta-lib.max/'),
       'ta-lib.min': path.join(__dirname, './ta-lib.min/'),

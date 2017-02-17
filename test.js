@@ -1,4 +1,6 @@
 import adl from './ta-lib.adl/test'
+import aroon from './ta-lib.aroon/test'
+import aroonosc from './ta-lib.aroonosc/test'
 import averageTest from './ta-lib.sum/test'
 import bbandsTest from './ta-lib.bbands/test'
 import demaTest from './ta-lib.dema/test'
@@ -12,6 +14,8 @@ import stddevTest from './ta-lib.stddev/test'
 import sumTest from './ta-lib.sum/test'
 
 describe('ta-lib.adl', adl)
+describe('ta-lib.aroon', aroon)
+describe('ta-lib.aroonosc', aroonosc)
 describe('ta-lib.average', averageTest)
 describe('ta-lib.bbands', bbandsTest)
 describe('ta-lib.dema', demaTest)

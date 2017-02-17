@@ -47,12 +47,12 @@ TODO
 - [ ] ADXR                 Average Directional Movement Index Rating
 - [ ] APO                  Absolute Price Oscillator
 - [x] AROON                Aroon
-- [ ] AROONOSC             Aroon Oscillator
+- [x] AROONOSC             Aroon Oscillator
 - [ ] BOP                  Balance Of Power
 - [ ] CCI                  Commodity Channel Index
 - [ ] CMO                  Chande Momentum Oscillator
 - [ ] DX                   Directional Movement Index
-- [ ] MACD                 Moving Average Convergence/Divergence
+- [x] MACD                 Moving Average Convergence/Divergence
 - [ ] MACDEXT              MACD with controllable MA type
 - [ ] MACDFIX              Moving Average Convergence/Divergence Fix 12/26
 - [ ] MFI                  Money Flow Index
