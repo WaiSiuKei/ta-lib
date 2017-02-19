@@ -18,7 +18,7 @@ var aroon = function (high, low, timePeriod) {
     throw new Error('Timeperiod should be an instance of Big or string!')
 
   var tp = Big(timePeriod)
-  var timePeriodNum = parseInt(timePeriod.toString())
+  var timePeriodNum = parseInt(tp.toString())
   var skip = 0
 
   var up = []
