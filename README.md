@@ -99,7 +99,7 @@ TODO
 
 - [x] ATR                  Average True Range
 - [ ] NATR                 Normalized Average True Range
-- [ ] TRANGE               True Range
+- [x] TRANGE               True Range
 
 #### Pattern Recognition
 
