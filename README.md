@@ -97,7 +97,7 @@ TODO
 
 #### Volatility Indicators
 
-- [ ] ATR                  Average True Range
+- [x] ATR                  Average True Range
 - [ ] NATR                 Normalized Average True Range
 - [ ] TRANGE               True Range
 
