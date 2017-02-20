@@ -43,6 +43,7 @@ TODO
 
 #### Momentum Indicators
 
+- [x] ADL                  Accumulation/Distribution Line
 - [ ] ADX                  Average Directional Movement Index
 - [ ] ADXR                 Average Directional Movement Index Rating
 - [ ] APO                  Absolute Price Oscillator
