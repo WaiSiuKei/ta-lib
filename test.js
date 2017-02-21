@@ -10,6 +10,7 @@ import eratioTest from './ta-lib.eratio/test'
 import kamaTest from './ta-lib.kama/test'
 import macdTest from './ta-lib.macd/test'
 import midpointTest from './ta-lib.midpoint/test'
+import minus_dm from './ta-lib.minus_dm/test'
 import smaTest from './ta-lib.sma/test'
 import stddevTest from './ta-lib.stddev/test'
 import sumTest from './ta-lib.sum/test'
@@ -27,6 +28,7 @@ describe('ta-lib.eRatio', eratioTest)
 describe('ta-lib.kama', kamaTest)
 describe('ta-lib.macd', macdTest)
 describe('ta-lib.midpoint', midpointTest)
+describe('ta-lib.minus_dm', minus_dm)
 describe('ta-lib.sma', smaTest)
 describe('ta-lib.stddev', stddevTest)
 describe('ta-lib.sum', sumTest)
