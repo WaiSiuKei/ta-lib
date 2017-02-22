@@ -61,7 +61,7 @@ TODO
 - [x] MINUS_DM             Minus Directional Movement
 - [ ] MOM                  Momentum
 - [ ] PLUS_DI              Plus Directional Indicator
-- [ ] PLUS_DM              Plus Directional Movement
+- [x] PLUS_DM              Plus Directional Movement
 - [ ] PPO                  Percentage Price Oscillator
 - [ ] ROC                  Rate of change : ((price/prevPrice)-1)*100
 - [ ] ROCP                 Rate of change Percentage: (price-prevPrice)/prevPrice
