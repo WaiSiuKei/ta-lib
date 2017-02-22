@@ -25,7 +25,7 @@ var minus_dm = function (high, low, timePeriod) {
   for (var i = skip + 1; i < high.length; i++) {
     var deltaHigh = high[i].minus(high[i - 1])
     var deltaLow = low[i - 1].minus(low[i])
-    dm1.push(deltaHigh.gt(deltaLow) ? max([deltaHigh, zero]) : zero)
+    dm1.push(deltaLow.gt(deltaHigh) ? max([deltaLow, zero]) : zero)
   }
 
   if (tp.eq('1')) return dm1
