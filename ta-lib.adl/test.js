@@ -32,7 +32,7 @@ export default () => {
       assert.isTrue(Array.isArray(result))
     })
     it('should return correct values', () => {
-      for (let i = 0; i < input.length; i++) {
+      for (let i = 0; i < result.length; i++) {
         assert.isTrue(result[i].toFixed(15) === output[i])
       }
     })

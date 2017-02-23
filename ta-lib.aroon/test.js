@@ -37,7 +37,7 @@ export default () => {
       assert.isTrue(Array.isArray(result['down']))
     })
     it('should return correct values', () => {
-      for (let i = 0; i < input.length; i++) {
+      for (let i = 0; i < result['up'].length; i++) {
         (['up', 'down']).forEach(key => {
           assert.isTrue(result[key][i].toFixed(2) === output[key][i])
         })

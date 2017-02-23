@@ -35,7 +35,7 @@ export default () => {
       assert.isTrue(Array.isArray(result['lowerband']))
     })
     it('should return correct values', () => {
-      for (let i = 0; i < input.length; i++) {
+      for (let i = 0; i < result['middleband'].length; i++) {
         (['middleband', 'upperband', 'lowerband']).forEach(key => {
           assert.isTrue(result[key][i].toFixed(15) === output[key][i])
         })

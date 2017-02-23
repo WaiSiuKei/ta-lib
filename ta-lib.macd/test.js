@@ -36,7 +36,7 @@ export default () => {
       assert.isTrue(Array.isArray(result['histogram']))
     })
     it('should return correct values', () => {
-      for (let i = 0; i < input.length; i++) {
+      for (let i = 0; i < result['macd'].length; i++) {
         (['macd', 'signalLine', 'histogram']).forEach(key => {
           assert.isTrue(result[key][i].toFixed(15) === output[key][i])
         })
