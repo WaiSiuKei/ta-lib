@@ -1,6 +1,6 @@
 var trange = require('ta-lib.trange')
-var average = require('ta-lib.average')
 var Big = require('big.js')
+var ema = require('ta-lib.ema')
 
 var atr = function (high, low, close, timePeriod) {
   if (!(timePeriod instanceof Big || typeof timePeriod === 'string'))
@@ -13,23 +13,7 @@ var atr = function (high, low, close, timePeriod) {
   var previous
 
   var tr = trange(high, low, close)
-  return tr.map((t, i) => {
-    if (isNaN(t)) {
-      skip += 1
-      return NaN
-    }
-    if (i < timePeriodNum + skip - 1) {
-      window.push(t)
-      return NaN
-    }
-    if (i === timePeriodNum + skip - 1) {
-      window.push(t)
-      previous = average(window)
-      return previous
-    }
-    previous = previous.times(tp.minus('1')).plus(t).div(tp)
-    return previous
-  })
+  return ema(tr, timePeriod)
 }
 
 
