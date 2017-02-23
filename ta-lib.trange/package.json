@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/WaiSiuKei/ta-lib#readme",
   "dependencies": {
-    "Big.js": "*"
+    "Big.js": "*",
+    "ta-lib.max": "*",
+    "ta-lib.sum": "*"
   }
 }
