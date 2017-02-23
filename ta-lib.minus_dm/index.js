@@ -1,23 +1,16 @@
 var Big = require('big.js')
 var max = require('ta-lib.max')
-var sum = require('ta-lib.sum')
 
-var minus_dm = function (high, low, timePeriod) {
-  if (!(timePeriod instanceof Big || typeof timePeriod === 'string'))
-    throw new Error('Timeperiod should be an instance of Big or string!')
-
-  var tp = Big(timePeriod)
-  var timePeriodNum = parseInt(timePeriod.toString())
-
+var minus_dm = function (high, low) {
   var skip = 0
-  var dm1 = []
+  var dm = []
   for (i = 0; i < high.length; i++) {
     if (high[i] instanceof Big) {
       skip = i
-      dm1.push(NaN)
+      dm.push(NaN)
       break
     } else {
-      dm1.push(NaN)
+      dm.push(NaN)
     }
   }
 
@@ -25,30 +18,10 @@ var minus_dm = function (high, low, timePeriod) {
   for (var i = skip + 1; i < high.length; i++) {
     var deltaHigh = high[i].minus(high[i - 1])
     var deltaLow = low[i - 1].minus(low[i])
-    dm1.push(deltaLow.gt(deltaHigh) ? max([deltaLow, zero]) : zero)
+    dm.push(deltaLow.gt(deltaHigh) ? max([deltaLow, zero]) : zero)
   }
 
-  if (tp.eq('1')) return dm1
-
-  skip = 0
-  var window = []
-  var previous
-  return dm1.map((d, i) => {
-    if (isNaN(d)) {
-      skip += 1
-      return NaN
-    } else if (i < timePeriodNum + skip - 1) {
-      window.push(d)
-      return NaN
-    } else if (i === timePeriodNum + skip - 1) {
-      window.push(d)
-      previous = sum(window)
-      return previous
-    } else {
-      previous = previous.minus(previous.div(tp)).plus(d)
-      return previous
-    }
-  })
+  return dm
 }
 
 
